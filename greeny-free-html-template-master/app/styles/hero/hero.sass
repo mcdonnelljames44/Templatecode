@@ -1,0 +1,25 @@
+.hero
+	@extend .container-fluid
+	background-color: $accent-2-dark
+	overflow-x: hidden
+	padding: 0
+
+.hero__row
+	@extend .row
+
+.hero__boxes-row
+	position: static
+	margin-right: -15px
+	margin-left: -15px
+	display: flex
+	flex-direction: column
+	flex-wrap: nowrap
+	z-index: 2
+	+media-breakpoint-up(xl)
+		flex-direction: row
+		position: absolute
+		bottom: 0
+		left: 0
+		margin: 0
+	@media (max-height: 768px)
+		position: static

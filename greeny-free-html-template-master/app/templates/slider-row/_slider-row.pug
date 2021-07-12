@@ -1,0 +1,70 @@
+mixin sliderRow(data)
+	+b.SECTION.slider-row.section--slider-row
+		+e.background
+
+		+e.container
+			+e.row
+
+				+e.col-1
+					+e.H4.upper-subheading We provide the best of it 
+					
+					+e.H2.heading.section-heading__.--color_light.--slider-row Our services
+
+					+e.buttons
+						+e.SVG.button-prev.nav-buttons__
+							use(xlink:href="#nav-buttons__button-prev")
+						+e.SVG.button-next.nav-buttons__
+							use(xlink:href="#nav-buttons__button-next")
+
+				+e.col-2
+					+e.slider.slider__
+						+e.wrapper
+
+							+e.slide
+
+					
+								+e.img.slider-row__img(src='assets/img/slider-row/plant.jpg')
+
+								+e.content.slider-row__slide-content
+									+e.A.heading-button.heading-button__()
+										+e.SVG.icon
+											use(xlink:href="#slider-row__security")
+										+e.background
+										+e.H3.heading.slider__heading Nature protection
+									+e.description.slider-row__slide-description Nature really needs it and here you would explain why or how good you are at it
+
+							+e.slide
+
+					
+								+e.img.slider-row__img(src='assets/img/slider-row/rhinoceros.jpg')
+
+								+e.content.slider-row__slide-content
+									+e.A.heading-button.heading-button__(href="#")
+										+e.SVG.icon
+											use(xlink:href="#slider-row__security")
+										+e.H3.heading.slider__heading Nature protection
+									+e.description.slider-row__slide-description Nature really needs it and here you would explain why or how good you are at it
+
+							+e.slide
+
+					
+								+e.img.slider-row__img(src='assets/img/slider-row/hand.jpg')
+
+								+e.content.slider-row__slide-content
+									+e.A.heading-button.heading-button__(href="#")
+										+e.SVG.icon
+											use(xlink:href="#slider-row__security")
+										+e.H3.heading.slider__heading Nature protection
+									+e.description.slider-row__slide-description Nature really needs it and here you would explain why or how good you are at it
+
+							+e.slide
+
+					
+								+e.img.slider-row__img(src='assets/img/slider-row/place.jpg')
+
+								+e.content.slider-row__slide-content
+									+e.A.heading-button.heading-button__
+										+e.SVG.icon
+											use(xlink:href="#slider-row__security")
+										+e.H3.heading.slider__heading Nature protection
+									+e.description.slider-row__slide-description Nature really needs it and here you would explain why or how good you are at it

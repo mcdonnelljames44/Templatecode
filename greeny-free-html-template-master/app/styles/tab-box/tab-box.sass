@@ -1,0 +1,23 @@
+.tab-box
+	display: none
+	text-align: center
+	opacity: 0
+
+.tab-box--active
+	display: block
+	opacity: 1
+	animation: tab-box__show 450ms ease forwards
+
+.tab-box__heading
+	margin-bottom: 2rem
+	font-size: 2.4rem
+	font-weight: 800
+
+.tab-box__text
+	margin-bottom: 2rem
+
+@keyframes tab-box__show
+	0%
+		opacity: 0
+	100%
+		opacity: 1

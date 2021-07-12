@@ -1,0 +1,54 @@
+.slider-row
+	position: relative
+	&::before
+		+setAbsPosition(0%,0%,left,top)
+		display: block
+		width: 100%
+		height: 50%
+		content: ''
+		background-color: $accent-2
+
+.slider-row__container
+	@extend .container
+	
+.slider-row__row
+	@extend .row
+
+.slider-row__col-1
+	@extend .col-12, .col-xl-4
+	text-align: center
+
+.slider-row__col-2
+	@extend .col-12, .col-xl-8
+
+.slider-row__slider
+	margin-top: 2rem
+	+media-breakpoint-up(xl)
+		margin-top: 0
+
+.slider-row__heading
+	z-index: 2
+
+.slider-row__img
+	width: 100%
+	max-height: 240px
+	+media-breakpoint-up(xl)
+		max-height: 150px
+
+.slider-row__upper-subheading
+	margin-top: 1rem
+	margin-bottom: 0
+	text-align: center
+	font-size: 14px 
+	font-weight: 300
+	color: $main-light
+
+.slider-row__slide-content
+	background-color: $accent-1-light
+	padding: 1rem 2rem 1.5rem 
+
+.slider-row__slide-description
+	color: $main-light
+	margin-top: 1rem
+
+

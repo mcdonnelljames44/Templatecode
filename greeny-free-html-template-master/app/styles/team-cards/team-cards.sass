@@ -1,0 +1,59 @@
+.team-cards
+	position: relative
+
+.team-cards__container
+	@extend .container
+
+.team-cards__row
+	@extend .row
+	justify-content: center
+	align-items: center
+
+.team-cards__heading
+	margin-bottom: 6rem 
+
+.team-cards__row--centred
+	justify-content: center
+
+.team-cards__col
+	@extend .col-12, .col-lg-6, .col-xl-4
+	text-align: center
+	&:nth-child(n+2)
+		margin-top: 4rem 
+
+	+media-breakpoint-up(lg)
+		&:nth-child(2)
+			margin-top: 0
+		&:nth-child(n+3)
+			margin-top: 4rem 
+			
+	+media-breakpoint-up(xl)
+		&:nth-child(n)
+			margin-top: 0 
+		&:nth-child(n+4)
+			margin-top: 4rem 
+
+.team-cards__card
+	display: inline-block 
+
+.team-cards__stripes
+	position: absolute
+	width: 100%
+
+.team-cards__stripe
+	position: absolute 
+	display: block
+	height: 2px
+	background-color: $accent-1
+
+	&:nth-of-type(n+1)
+		top: 0
+
+	&:nth-of-type(n+2)
+		top: 8px
+
+	&:nth-of-type(n+3)
+		top: 16px
+
+
+		

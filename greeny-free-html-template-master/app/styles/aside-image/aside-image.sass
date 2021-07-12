@@ -1,0 +1,120 @@
+.aside-image
+
+.aside-image__buttons
+	margin-top: 3rem
+	text-align: center
+	vertical-align: middle
+
+.aside-image__button
+	&:not(:first-of-type)
+		margin-left: 1rem
+
+.aside-image__container
+	@extend .container
+
+.aside-image__row
+	@extend .row 
+
+.aside-image__row--revresed_lg
+	+media-breakpoint-up(lg)
+		flex-direction: row-reverse
+
+.aside-image__heading
+	margin-bottom: 5rem
+	align-self: center
+	+media-breakpoint-up(lg)
+		margin-bottom: 2.5rem
+		align-self: left
+
+.aside-image__img-link
+	display: block
+	height: 100%
+	user-select: none 
+
+.aside-image__img
+	width: 100%
+	height: 100%
+
+.aside-image__img-link--displayed_lg
+	@extend .aside-image__img-link
+	display: none
+	+media-breakpoint-only(lg)
+		display: block
+
+.aside-image__col-1
+	@extend .col-12, .col-md-3, .col-lg-6, .col-xl-2
+	padding: 0
+	display: flex
+	flex-direction: column
+	+media-breakpoint-up(md)
+		margin-top: 4rem 
+		align-self: flex-end
+
+.aside-image__col-2
+	@extend .col-12, .col-md-9, .col-lg-8, .col-xl-5
+	padding: 0
+	margin-top: 4rem
+	+media-breakpoint-up(lg)
+		display: none
+	+media-breakpoint-up(xl)
+		margin: 0
+		display: block
+	+media-breakpoint-only(md)
+		order: 2
+
+.aside-image__col-3
+	@extend .col-12, .col-lg-6, .col-xl-5
+	display: flex
+	justify-content: center
+	flex-direction: column
+	padding: 0 3rem 0 4rem
+	text-align: center
+	+media-breakpoint-up(lg)
+		text-align: left
+
+.aside-image__side-box
+	text-align: center
+	padding: 1rem 3rem 1rem 3rem
+	border-top: $accent-2-dark 2px solid
+	background-color: $accent-2	
+	+media-breakpoint-only(lg)
+		order: 2
+	+media-breakpoint-only(md)
+		padding: 1.5rem 2rem 1.5rem 2rem
+		border-top: 0
+		text-align: right
+	+media-breakpoint-up(xl)
+		padding: 1.5rem 2rem 1.5rem 2rem
+		border-top: 0
+		text-align: right
+
+.aside-image__side-box-heading
+	display: inline-block
+	position: relative
+	margin-bottom: 1rem
+	padding-bottom: 1rem
+	font-family: $heading-font
+	font-size: 2.4rem
+	color: $main-light
+	&::after
+		+setAbsPosition(25%, 0, right, bottom)
+		display: block
+		width: 3rem
+		height: 2px
+		content: ''
+		background-color: $main-light
+	+media-breakpoint-only(md)
+		&::after
+			+setAbsPosition(0px, 0px, right, bottom)
+	+media-breakpoint-up(xl)
+		&::after
+			+setAbsPosition(0px, 0px, right, bottom)
+
+.aside-image__side-box-text
+	font-size: 1.6rem
+	color: $main-light
+	text-align: center 
+	+media-breakpoint-only(md)
+		text-align: right
+	+media-breakpoint-up(xl)
+		text-align: right

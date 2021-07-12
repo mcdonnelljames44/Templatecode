@@ -1,0 +1,145 @@
+// This extension of native swiper classes is necessary because
+// of changing namespace to match BEM convention
+// ===========
+// BE CAUTIOS!
+// ===========
+// Only classes that are required for used swiper instances are 
+// extended, if you are going to use custom swiper instance or 
+// make changes to the current ones, chances are you will need 
+// some others classes. Either extend them here, or use native 
+// swiper classes instead.
+
+.slider
+	@extend .swiper-container
+
+.slider-horiziontal
+	@extend .swiper-container-horizontal
+
+.slider-fade
+	@extend .swiper-container-fade
+
+.slider__wrapper
+	@extend .swiper-wrapper
+
+.slider__slide
+	@extend .swiper-slide
+
+.slider__slide--prev
+	@extend .swiper-slide-prev
+
+.slider__slide--active
+	@extend .swiper-slide-active
+
+.slider__pagination
+	@extend .swiper-pagination
+
+.slider__pagination--hidden
+	@extend .swiper-pagination-hidden
+
+
+// Custom classes
+
+.slider__pagination--hero
+	+setAbsPosition(50%, 98%)
+	display: flex 
+		
+	+media-breakpoint-up(xl)
+		+setAbsPosition(45px, 35%)
+		display: block 
+
+	@media (max-height: 768px)
+		+setAbsPosition(50%, 98%)
+		display: flex 
+
+.slider__pagination--testimonials
+	position: static
+	display: flex
+	flex-flow: row nowrap		
+
+.slider__bullet
+	display: block
+	margin-bottom: 8px
+	margin-left: 1.2rem 
+	width: 16px
+	height: 16px
+	opacity: 0.7
+	border-radius: 50%
+	background-color: $main-light
+	cursor: pointer
+
+.slider__bullet--hero 
+	@extend .slider__bullet
+	+media-breakpoint-up(xl)
+		width: 12px
+		height: 12px
+		margin-left: 0 
+
+	@media (max-height: 768px)
+		margin-left: 1.2rem 
+		width: 16px
+		height: 16px
+
+.slider-bullet--testimonials
+	@extend .slider__bullet
+	margin-bottom: 0
+	background-color: $accent-1 
+
+.slider__bullet--active
+	opacity: 1
+
+// calc used here because of the issue with DOM orientationchange event
+// TODO: provide js fallback for Opera Mini
+// P.S: seem to work fine with all modern browsers anyway
+
+.slider__img--hero
+	height: calc(100vh - 70px)
+	min-width: 100%
+	min-height: 500px
+
+.slider__content
+	text-align: center
+
+.slider__content--left
+	text-align: left 
+
+.slider__content--hero
+	+setAbsPosition(50%, 50%)
+	+media-breakpoint-up(xl)
+		+setAbsPosition(50%, 35%)
+	@media (max-height: 768px)
+		+setAbsPosition(50%, 50%)
+
+.slider__heading-button
+	margin-top: 1rem
+
+.slider__heading
+	color: $main-light
+	font-family: $heading-font
+	font-weight: 800
+	white-space: nowrap
+
+.slider__heading--hero
+	+media-breakpoint-up(xs)
+		font-size: 32px
+		font-size: 10vw
+	+media-breakpoint-up(sm)
+		font-size: 52px
+		font-size: 9vw 
+	+media-breakpoint-up(md)
+		font-size: 62px
+		font-size: 7vw 
+	+media-breakpoint-up(lg)
+		font-size: 68px
+		font-size: 5.5vmax
+
+.slider__subheading
+	@extend .slider__heading 
+	font-weight: 600
+
+.slider__subheading--hero
+	@extend .slider__heading--hero 
+
+.slider__button--hero
+	margin-top: 2rem
+
+

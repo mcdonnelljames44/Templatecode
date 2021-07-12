@@ -1,0 +1,32 @@
+//	==========================================================================
+//	IMPORTS
+//	========================================================================== 
+
+@import 'vars'
+@import 'mixins'
+@import 'fonts'
+
+html
+	font-size: 62.5% // 10 px = 1rem now 
+	cursor: default
+
+ol, ul
+	list-style: none
+
+a
+	color: inherit
+	&:hover
+		color: inherit
+		text-decoration: none
+	&:focus 
+		color: inherit 
+		text-decoration: none
+
+button:focus
+	outline: none
+
+.page
+	font-family: $default-font
+	color: $main-dark 
+	font-size: 1.6rem
+	line-height: 1

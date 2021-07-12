@@ -1,0 +1,106 @@
+.news-row
+
+
+.news-row__container
+	@extend .container-fluid
+	max-width: 1170px
+
+.news-row__row
+	@extend .row
+	justify-content: center
+
+.news-row__heading
+	margin-bottom: 6rem 
+
+.news-row__button-prev
+	+setAbsPosition(5px, 50%, left, top)
+	width: 42px
+	height: 42px
+
+.news-row__button-next
+	+setAbsPosition(5px, 50%, right, top)
+	width: 42px
+	height: 42px
+
+.news-row__col
+	@extend .col-12 
+	padding: 0 4rem
+
+.news-row__post
+	position: relative
+	display: flex
+	flex-flow: column nowrap
+	text-align: left
+	margin: 0 2rem
+	&::after 
+		position: absolute
+		top: 0
+		left: 0
+		display: block
+		width: 100%
+		height: 2px
+		border-radius: 4px
+		content: ''
+		background-color: $accent-1-light
+	&::before
+		position: absolute
+		bottom: 0
+		left: 0
+		display: block
+		width: 100%
+		height: 2px
+		border-radius: 4px
+		content: ''
+		background-color: $accent-1-light
+
+.news-row__post-img-link
+	margin: 1.5rem 0 1.5rem 
+	display: block
+	width: 100%
+	height: 100%
+
+.news-row__post-img
+	width: 100% 
+	height: auto
+
+.news-row__post-heading
+	margin-bottom: 1rem 
+	font-family: $heading-font
+	font-size: 1.8rem
+	font-weight: 800
+
+.news-row__post-text
+	font-size: 1.4rem
+
+.news-row__button
+	margin-bottom: 1.5rem
+	align-self: flex-end
+
+.news-row__footer
+	margin: 0 2rem 0
+	display: flex
+	flex-flow: row wrap
+	justify-content: space-between 
+	align-items: center
+
+.news-row__footer-boxes
+	display: flex
+	flex-flow: row nowrap
+
+.news-row__footer-box
+	margin-top: 0.8rem
+	&:nth-child(n+2)
+		margin-left: 1rem
+
+.news-row__date
+	margin-top: 0.5rem 
+	color: $accent-1-light
+	font-size: 1.4rem
+	font-style: italic 
+	text-transform: uppercase
+
+
+
+
+
+

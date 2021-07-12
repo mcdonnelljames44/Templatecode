@@ -1,0 +1,12 @@
+include ../scripts/_scripts
+include ../helpers/_helpers
+include ../../../node_modules/bemto.pug/bemto
+
+- set_bemto_settings({ modifier: '--' })
+
+doctype html
+html(lang='en')
+	include ../head/_head.pug
+	+b.BODY.page
+		block content
+		+scripts(scripts)
